@@ -34,7 +34,6 @@ urltrigger = 'https://api.particle.io/v1/devices/310047000447343232363230/detect
 query = {'access_token':'f8093528e7b81caceeaecd0569423df524dffbab'}
 urlget = 'https://api.particle.io/v1/devices/310047000447343232363230/spot1?access_token=f8093528e7b81caceeaecd0569423df524dffbab'
 
-
 while True:
     if io.input(pir_pin):
         print "Motion Detected!"
@@ -68,10 +67,8 @@ while True:
                     print photon.text
                     print(res.text)
                     break
-                
-	print "ended"
-	
-	time.sleep(10);
-	
+        if io.input(pir_pin) == 0
+            print "ended"
+		
 	
 

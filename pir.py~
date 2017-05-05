@@ -1,0 +1,20 @@
+import time 
+
+import RPi.GPIO as io 
+io.setmode(io.BCM)
+import glob
+
+pir_pin = 18
+
+io.setup(pir_pin, io.IN) # activate input
+
+while True:
+    if io.input(pir_pin) == 0:
+        print "Motion Detected!"
+        time.sleep(1)
+        if io.input(pir_pin):
+            print "Motion Ended!"
+            
+            
+
+        
